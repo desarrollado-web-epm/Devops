@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-     
-    }
-
     stages {
         stage('Clone repository') {
             steps {
@@ -14,11 +10,10 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("$DOCKERHUB_REPO:latest")
+                    docker.build('nginx_image:latest')
                 }
             }
         }
-        
     }
     post {
         always {

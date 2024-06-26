@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git 'https://github.com/your_username/your_repository.git'
+                git 'https://github.com/desarrollado-web-epm/Devops.git'
             }
         }
         stage('Build Docker Image') {
